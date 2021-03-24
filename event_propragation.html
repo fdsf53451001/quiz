@@ -1,0 +1,32 @@
+<html> 
+<head> 
+ <title>My Document</title> 
+ <script type="text/javascript">  
+    function change() {
+        document.getElementById('cgu').innerHTML = "CSIE@CGU"; 
+        document.getElementById('good').innerHTML = "怎麼那麼棒！！."; 
+    }
+    function new_button(){
+        var btn = document.createElement("BUTTON"); 
+        btn.innerHTML = "Change this document"; 
+        document.body.appendChild(btn); 
+        btn.addEventListener("click",change);
+    }    
+ </script> 
+</head> 
+<body>
+    <div id='outter'>
+        <input type="button" value="Try it." onclick="new_button()" id='inner'>
+    </div> 
+ <h1 id='cgu'>CGU</h1> 
+ <p id='good'>好棒棒</p> 
+ 
+</body> 
+<script>
+    document.getElementById('outter').addEventListener("click",function(){console.log('outter_bubble')});
+    document.getElementById('inner').addEventListener("click",function(){console.log('inner_bubble')});
+
+    document.getElementById('outter').addEventListener("click",function(){console.log('outter_capture')},true);
+    document.getElementById('inner').addEventListener("click",function(){console.log('inner_capture')},true);
+</script> 
+</html>
