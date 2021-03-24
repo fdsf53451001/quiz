@@ -1,23 +1,21 @@
 <html> 
 <head> 
  <title>My Document</title> 
- <script type="text/javascript"> 
- function change() { 
-/*
- var header = document.getElementsByTagName("H1").item(0); 
- header.innerHTML = "CSIE@CGU"; 
- 
- var para = document.getElementsByTagName("P").item(0); 
- para.innerHTML = "怎麼那麼棒！！."; 
- */
- document.getElementById('cgu').innerHTML = "CSIE@CGU"; 
- document.getElementById('good').innerHTML = "怎麼那麼棒！！."; 
-
- } 
+ <script type="text/javascript">  
+    function change() {
+        document.getElementById('cgu').innerHTML = "CSIE@CGU"; 
+        document.getElementById('good').innerHTML = "怎麼那麼棒！！."; 
+    }
+    function new_button(){
+        var btn = document.createElement("BUTTON"); 
+        btn.innerHTML = "Change this document"; 
+        document.body.appendChild(btn); 
+        btn.addEventListener("click",change);
+    }
  </script> 
 </head> 
-<body> 
- <input type="button" value="Change this document." onclick="change()"> 
+<body>
+ <input type="button" value="Try it." onclick="new_button()">
  <h1 id='cgu'>CGU</h1> 
  <p id='good'>好棒棒</p> 
 </body> 
