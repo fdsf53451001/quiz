@@ -18,9 +18,6 @@
     <div id='outter'>
         <input type="button" value="Try it." onclick="new_button()" id='inner'>
     </div> 
- <h1 id='cgu'>CGU</h1> 
- <p id='good'>好棒棒</p> 
- 
 </body> 
 <script>
     document.getElementById('outter').addEventListener("click",function(){console.log('outter_bubble')});
@@ -28,5 +25,17 @@
 
     document.getElementById('outter').addEventListener("click",function(){console.log('outter_capture')},true);
     document.getElementById('inner').addEventListener("click",function(){console.log('inner_capture')},true);
+    /*
+        when the event signal pass to target element,
+        the eventPhase become AT_TARGET, it will show the listener
+        register first (in this case, inner bubble ,then inner capture)
+        
+        eventPhase : 1 是CAPTURING_PHASE，2 是AT_TARGET，3 是BUBBLING_PHASE
+        
+        event fire:
+            CPATURE_PHASE   document -> body -> div
+            AT_TARGET       input(BUTTON)
+            BUBBLING_PHASE  div -> body -> document
+    */
 </script> 
 </html>

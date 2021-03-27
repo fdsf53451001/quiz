@@ -1,6 +1,10 @@
 function change() {
+    /*
     document.getElementById('cgu').innerHTML = "CSIE@CGU"; 
-    document.getElementById('good').innerHTML = "怎麼那麼棒！！."; 
+    document.getElementById('good').innerHTML = "怎麼那麼棒！！.";     
+    */
+   $("#cgu").html("CSIE@CGU");
+   $("#good").html("怎麼那麼棒！！.");
 }
 function new_button(){
     var btn = document.createElement("BUTTON"); 
