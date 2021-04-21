@@ -9,14 +9,13 @@ const styleArgument = {fontSizze:'100px',color:'red'};
 
 const changeText=(event)=>{
   console.log(event.target);
-  event.target.innerText = event.target.innerText + "被點了了";
+  event.target.innerText = event.target.innerText + "被點了";
 }
 
 ReactDOM.render(
   <React.StrictMode>
     <GenerateBtn />
   </React.StrictMode>,
-  //<h1 style={styleArgument} onClick={changeText}>Hello CGU!</h1>,
   document.getElementById('root')
 );
 
