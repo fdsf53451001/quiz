@@ -1,4 +1,3 @@
-import Button from '@material-ui/core/Button';
 
 const changeText = function(event){
     event.target.innerText = event.target.innerText + "被點了";
@@ -7,16 +6,16 @@ const changeText = function(event){
 const MultiButton = function(){
     var output = [];
     for(var step=0;step<10;step++){
-        output.push(<Button variant="contained" color="primary" onClick={changeText}>第{step+1}個按鍵</Button>);
+        output.push(<button onClick={changeText}>第{step+1}個按鍵</button>);
     }
     return output;
 };
 
-function MaterialBtn(){
+function GenerateBtn(){
     return(
     <div className="Btn">
-        {MaterialBtn()}
+        {MultiButton()}
     </div>);
 };
 
-export default MaterialBtn;
+export default GenerateBtn;

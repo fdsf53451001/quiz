@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import GenerateBtn from './GenerateBtn';
+// import GenerateBtn from './GenerateBtn';
 import reportWebVitals from './reportWebVitals';
 
 const styleArgument = {fontSizze:'100px',color:'red'};
@@ -14,7 +14,7 @@ const changeText=(event)=>{
 
 ReactDOM.render(
   <React.StrictMode>
-    <GenerateBtn />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
